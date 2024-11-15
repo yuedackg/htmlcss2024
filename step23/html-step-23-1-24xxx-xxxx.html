@@ -1,14 +1,39 @@
+<!-- filename:  html-step23-1-24000-xxxx.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
     <style>
+        thead th, tr th {
+            background-color: lightblue;
+        }
+        th, td{
+            border: solid 2px black;
+            width: 100px;
+            height: 30px;
+        }
+        td{
+            text-align: right;
+        }
+        caption{
+            caption-side: top;
+        }
+        table {
+            border-collapse: collapse;
+            /* border-spacing: 20px; */
+        }
 
-    </style>
+        thead th:nth-child(1) { 
+            /* background-color: red; */
+            border: none;
+            background-color: white;
+        }
+</style>
 </head>
 <body>
-    <table border="1">
+    <table border="0">
+
         <thead>
             <th></th>
             <th>平日</th>
@@ -43,6 +68,7 @@
             <td>１０００円</td>
             
         </tr>
+        <caption>※２０１９年１０月改定の入場料</caption>
     </table>
 </body>
 </html>
