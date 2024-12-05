@@ -13,6 +13,30 @@
             box-sizing: border-box;
             /* border: solid 1px gray; */
         }
+        body{
+            width: 600px;
+            margin: 0 auto;
+        }
+        /* 親子セレクタ */
+        body > h1 { 
+            padding-left: 10px;
+        }
+        article{
+            clear: both;
+            border: solid 1px green;
+        }
+        article > h1{
+            background-color: green;
+            color: white;
+        }
+        article > div{
+            padding: 10px;
+            height: 200px;
+        }
+        img{
+            box-shadow: 5px 5px 20px;
+            float: left;
+        }
 
     </style>
 </head>
@@ -22,7 +46,7 @@
     <article>
         <h1>サイクリングロードの概要</h1>
         <div>
-            <img src="./image/tcr-01.jpg" alt="">
+            <img src="./image/tcr-01.jpg" alt="" >
             <p>多摩川サイクリングロードは自転車と歩行者の為の専用道路で、その全長は約60kmもあります。もちろん、自動車は通行できません。</p>
         </div>
 
