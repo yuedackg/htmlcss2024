@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+body {
+    width: 500px;
+
+}
+
+body>h1 {
+    padding-left: 10px;
+}
+
+article {
+    /* padding: 10px; */
+    border: solid 1px green;
+    /* clear: both; */
+    /* border:  solid 1px green; */
+    /* padding-top: 0; */
+}
+article > div{
+    height: 200px;
+}
+article h1 {
+    /* padding: 5px; */
+    /* margin-top: 0px; */
+    background-color: green;
+    color: white;
+    /* margin-top: 10px; */
+}
+
+article img {
+    margin: 10px;
+    box-shadow: 5px 5px 10px;
+    float: left;
+}
+
+article p {
+    
+    padding: 5px;
+}
+
