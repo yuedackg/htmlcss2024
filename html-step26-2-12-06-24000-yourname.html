@@ -1,0 +1,89 @@
+<!-- filename: html-step26-2-12-06-24000-yourname.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        :root{
+            --aside-width: 40% ;
+        }
+        header, nav, aside, main, footer {
+            /* 枠線込みで、widthの値に調整する */
+            box-sizing: border-box;
+            border: solid 1px gray;
+        }
+        body{
+            display: flex;
+            flex-wrap: wrap;
+            width: 700px;
+        }
+        header, nav, footer {
+            width: 100%;
+        }
+        nav{
+            display: none;
+        }
+        nav ul{
+            list-style-type: none;
+            padding-left: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav ul li {
+            width: 25%;
+            background-color: antiquewhite;
+        }
+        aside{
+            width: var(--aside-width) ;
+            height: 70vh;
+            /* display: none; */
+        }
+        main{
+            width: calc( 100% - var(--aside-width) ) ;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        
+        header<br>
+
+        ・商品販売の店舗（屋号）を考える。<br>
+        ・画像イメージを考える（ネットから探す）
+
+    </header>
+    <nav>
+        nav.
+        <!-- <ul>
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+        </ul> -->
+
+        
+    </nav>
+    <aside>
+        side menu<br>
+
+        ・商品販売のカテゴリーの一覧を考える
+
+    </aside>
+    <main>
+        main contents<br>
+
+        ・写真を探す（作る）<br>
+        ・文章考える<br>
+        ・タイトル文字<br>
+
+        数個ずつ
+    </main>
+    <footer>
+        footer
+    </footer>
+</body>
+
+</html>
