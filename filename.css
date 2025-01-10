@@ -1,0 +1,36 @@
+/*
+# 外部CSSファイルの書き方について
+
+## 外部ファイルのVSCode出の開き方
+
+‐ ファイル名をCtrlを押しながら、クリックする
+　HTMLとCSSの二つのファイルが適切な場所に自動的に作成される
+　場所の指定を誤って、正常なデザインの指定が行われない
+
+## CSSファイルの内容について
+
+### CSSファイルの中の文字コードの指定
+
+使われる文字コードは基本的にUTF-8が多いので次のコードを書き込むこと
+
+@charset "utf-8" ;
+
+昔のHTMLでは、Shift-JISが使われている
+
+@charset "shift_jis" ; 
+
+と書きます
+
+### CSSファイルの中に、CSSファイルを読み込む
+
+@import url ( "subfilename.css" )  ; 
+
+と記述する.
+ほぼ使わないので、余り気にしなくてもよい
+ */
+ @charset "utf-8";
+@import url("filenam2.css");
+
+body{
+    background-color: blue;
+}

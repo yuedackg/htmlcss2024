@@ -1,0 +1,37 @@
+<!-- filename:　html2024-2025-0110-24000-yourname.html -->
+<!--
+
+# CSSの書き方について学ぶ 
+
+- タグの属性に書き込む
+    ‐ メリット：タグの一つ一つにデザインを適用できる
+    ‐ デメリット：内容の文章が読みにくくなる
+- <style>タグの間に記述する
+    - メリット：本文の中がシンプルになるため、テキスト情報の修正をしやすい
+    ‐ デメリット：デザインが分離されるために、どこにかかるデザインかわかりにくい
+    ‐ デザインと文字の分離が行われ始めるために、作業分担がしやすくなる
+- 外部のファイルに記述する
+    - メリット：CSSデザイン部分を完全に別のファイルに写すことができる
+    　　　　　　デザイナーが別の人なら作業継続できる
+    ‐ メリット２：CSSのファイルを他のHTMLで読み込むことで、
+    　　　　　　　同じデザインに揃えることができる
+    ‐ デメリット：CSSのファイルを開かないと、デザインが想像できない。
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    <title>Document</title>
+    <link rel="stylesheet" href="filename.css">
+    <style>
+        p { font-weight: bold;          /*文字を太くする*/
+            text-decoration: underline; /* 下線を付ける*/}
+        body{ background-color: red;}
+    </style>
+    <link rel="stylesheet" href="filename2.css">
+</head>
+<body>
+    <p style="color: red;font-size: 20pt;">私の名前は植田です。</p>
+    <p>私の名前は宮崎です</p>
+    <p>私の名前は明石です</p>
+</body>
+</html>
