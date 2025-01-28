@@ -1,0 +1,90 @@
+<!-- filename: html-2025-0115-24000-yourname.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+    アンケートなどで使用するテキストボックス、チェックボックス等の作り方について学びます。 
+-->
+    <!-- 文字を塊として扱うタグlabel -->
+    <label for="simei">名前：</label>
+    <!-- テキストボックス text -->
+    <input type="text" name="simei" id="" size="5">
+    <!-- 
+     labelのfor属性に指定した文字と、テキストボックスのname属性の文字を一致させる
+     テキストボックスの長さはsize属性で指定する-->
+
+    <br>
+    <!-- ラジオボタン -->
+    <input type="radio" name="A" id="" value="男性">男性
+    <input type="radio" name="A" id="" value="女性">女性
+    <input type="radio" name="B" value="1年生">1年生
+    <input type="radio" name="B" value="2年生">2年生
+    <!-- 
+        name属性はグループの名前。同じ名前でグループを作る
+        value属性は、識別のための文字列、
+        　　　　指定する文字はサーバプログラム側から決まる
+     -->
+
+    <br>
+    <!-- チェックボックス -->
+    <input type="checkbox" name="C" id="" value="B">野球
+    <input type="checkbox" name="C" id="" value="e">eスポーツ
+    <input type="checkbox" name="C" id="" value="d">ドライブ
+    <!-- 
+        チェックボックスは複数の中から複数個を選択する
+        グループを作る名前をname属性で指定する
+        どれが選択されたかの識別をvalue属性で行う（プログラム側から）
+    -->
+    <select name="" id="">
+        <option value="W">web学科</option>
+        <option value="C">Cg学科</option>
+        <option value="A">情報社会学科</option>
+    </select>
+    <!-- 
+        プルダウンメニューはselectタグを用いる
+        要素はoptionタグを使う
+        表示される文字は、タグの間に書く
+        value属性は、プログラムに渡される文字列
+      -->
+
+      <br>
+      <textarea name="" id="" cols="20" rows="3">
+      </textarea>
+      <!-- 
+        textareaタグは文章を入力
+        cols：横の文字数
+        rows：縦の行数
+       -->
+      <br>
+       <input type="submit" value="送信ボタン">
+       <input type="reset" value="リセット">
+       <!-- 
+       submitボタンは、サーバに入力されたデータを送る
+       resetボタンは、入力された値をクリアする -->
+      <button>送信ボタン（ダミー）</button>
+      <input type="button" value="送信ボタン（ダミー）">
+
+      <hr>
+      <form action="" method="post">
+        クレジットカードNo：
+        <input type="text" name="aaa" id="aaa">
+        <input type="submit" value="送信">
+      </form>
+      <!-- 
+      submitボタンが押されたら、submitボタンが置かれているformタグの内容が送信される(formタグに囲まれていない部分は送信されない)
+      テキストボックス、ラジオボタンなどは、formタグの間に書く
+      methodでgetを指定すると、入力データはURLに埋め込まれる
+      　　　　postを指定すると、入力データはURLに現れない
+      actionの欄は、データを渡すサーバ側のプログラム名を
+      　　　　指定する
+      -->
+
+</body>
+
+</html>

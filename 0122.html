@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function manLocation() {
+            // window.location = "http://www.yahoo.co.jp"
+
+        }
+
+        function manHistory() {
+            console.log(history.length)
+            alert( history.length)
+            window.history.forward()
+        }
+
+        function hideButton(){
+            console.log( "hideButton()...start.")
+            document.getElementById('hideBlock').style.display = 'none';
+        }
+    </script>
+</head>
+
+<body>
+    <h1>locationオブジェクトを操作する</h1>
+    <button onclick="manLocation()">
+        ｈ１　タグの内容を参照する
+    </button>
+    <hr>
+
+    <h1>historyオブジェクトを操作する</h1>
+    <button onclick="manHistory()">
+        historyオブジェクトを操作する
+    </button>
+    <br>
+
+    <div id="hideBlock">
+            <h1 >button を非表示にする</h1>
+    <button onclick="hideButton()">
+        このボタンが押されると消える
+    </button>
+    </div>
+
+</body>
+
+</html>
