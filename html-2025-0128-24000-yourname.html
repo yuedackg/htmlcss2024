@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div,
+        span {
+            border: 1px gray solid;
+            /* height: 50px; */
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>div要素はブロック要素</h1>
+    <div>植</div>
+    <div>田</div>
+    <div>吉</div>
+    <div>祥</div>
+    <p>
+        ブロック要素はレイアウト要素で、何もしなければ、横100％のサイズで伸縮する。 ふつうは、横幅、縦の高さを設定してならべる。
+    </p>
+
+    <h1>inline要素について</h1>
+    <span>植</span>
+    <span>田</span>
+    <span>吉</span>
+    <span>祥</span>
+    <p>
+        インライン要素は、レイアウトの為の要素にならないため、width,heihgt等のプロパティに反応しない。文字を横書きで並べるようなイメージ。
+        span、pタグなどいくつかの要素がこのカテゴリになる。<br>
+        解決方法１は、ブロック要素のdivで囲む<br>
+        解決方法２は、inline-block要素に変更する等がある。<br>
+               display:inline-block;を使用する
+    </p>
+
+    <h2>div要素を使った解決</h2>
+    <div><span>植</span></div>
+    <div><span>田</span></div>
+    <div><span>吉</span></div>
+    <div><span>祥</span></div>
+    <style>
+        .ib{
+            display: inline-block;
+        }
+    </style>
+    <h2>inline-blockを使った解決</h2>
+    <span class="ib">植</span>
+    <span class="ib">田</span>
+    <span class="ib">吉</span>
+    <span class="ib">祥</span>
+    <p>
+        インライン要素をブロック要素として扱う指定に、inline-block指定がある。<br>
+        セレクタ｛
+        　display: inline-block;
+        ｝
+        のように記述する。
+
+        メリットは、divタグのように多重のカプセル化が不要なことで、コードの可読性が向上する。
+    </p>
+
+    <h2>flexbox縦の位置を決める</h2>
+    <style>
+        .container{ width: 500px ; height: 500px; display: flex;
+            align-items: center;            /* 縦方向の位置 */
+            justify-content: space-around;  /* 横方向の位置 */
+        }
+        .item{ width: 160px; height: 160px;}
+    </style>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+    <h2>flexbox -&gt; order (子要素での設定) </h2>
+    <style>
+        .container2{ display: flex; width: 600px; height: 200px;}
+        .container2 > div { width: 90px;}
+        .item24{ order: 1;}                 /* 順序をCSSで変える */
+    </style>
+    <div class="container2">
+        <div class="item21">No.1</div>
+        <div class="item22">No.2</div>
+        <div class="item23">No.3</div>
+        <div class="item24">No.4</div>
+        <div class="item25">No.5</div>
+        <div class="item26">No.6</div>
+    </div>
+
+
+</body>
+
+</html>
