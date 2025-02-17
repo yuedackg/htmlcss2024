@@ -1,17 +1,103 @@
 <!-- filename: index.html （フォルダ：Q4問題） -->
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BBアシストカンパニー</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap&subset=japanese">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap&subset=japanese">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/bb.png" type="image/png">
     <link rel="shortcut icon" href="img/bb.svg" type="image/svg+xml">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
 
+        :root {
+            --base-font-color: #333333;
+            --base-font-color-under-string:#707F89;
+        }
+
+        .site {
+            display: flex;
+            align-items: center;
+            /* 上下方向の設定 */
+        }
+
+        .site img {
+            width: 42px;
+            margin-right: 10px;
+        }
+
+        .site .corp {
+            color: #333333;
+            font-size: 12pt;
+            font-weight: 900;
+            line-height: 1.4;
+        }
+
+        .site .desc {
+            color: #707F89;
+            /* color: var(--base-font-color-under-string); */
+            font-size: 10px;
+            line-height: 1.4;
+        }
+        .sr-only{
+            border: 0;
+            clip: rect(0 0 0 0 );
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+        .nav-button{
+            box-sizing: content-box;    
+            padding: 0;
+            outline: none;
+            border: none;
+            background: none;
+            width: 20px;
+            height: 14px;
+            cursor: pointer;
+            color: #2E5180;
+        }
+
+        header * {
+            border: 1px solid gray;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <header>
+        <div class="site">
+            <img src="img/bb.svg" alt="会社ロゴ">
+            <div>
+                <p class="corp">BBアシスタントカンパニー</p>
+                <p class="desc">確かなスタッフによる業務サポート</p>
+            </div>
+        </div>
+        <button class="nav-button">
+            <span class="sr-only">MENU</span>
+        </button>
+
+    </header>
+    <nav>
+
+    </nav>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
 </body>
+
 </html>
