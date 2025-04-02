@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var win;    // 開いたWindowのIDを保存
+        function foo() {
+            win = window.open("http://www.yahoo.co.jp/", "_blank");
+        }
+        function bar() {
+            win.close();    // 別のwindow IDを持つもの閉じる
+        }
+        function ooo() {
+            alert("aaa");
+            window.resizeTo(200, 300);  // Edgeでは使えない命令
+        }
+        function changeText(){
+            var item ;
+            item = document.getElementById( "divItem");
+            item.innerText = "ueda";
+            item.style.color = "red";
+            item.style.backgroundColor = "green";
+            item.style.height="100px";
+            item.style.display="none";  // item を非表示にする
+                    // block: 表示、none：非表示として使われる
+        }
+        function showText(){
+            var item ;
+            item = document.getElementById( "divItem");
+            item.style.display = "block";
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="foo()">Yahoo preview</button>
+    <button onclick="bar()">window close</button>
+    <button onclick="ooo()">画面サイズを２００ｘ３００に変更</button>
+
+    <hr>
+    <h1>Documentオブジェクトで使える命令</h1>
+    <div id="divItem">---</div>
+    <button onclick="changeText()"> div の内容を変更する</button>
+    <button onclick="showText()"> 消えたdivを表示する</button>
+</body>
+
+</html>

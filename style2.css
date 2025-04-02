@@ -1,0 +1,19 @@
+table {
+    border-collapse: collapse;
+}
+
+thead th {
+    color: white;
+    background-color: green;
+}
+
+thead th,
+td {
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+}
+
+caption {
+    caption-side: bottom;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBアシストカンパニー</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap6subset=japanese">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/bb.png" type="image/svg+xmi">
+    <link rel="shortcut icon" href="img/bb.svg" type="image/svg+xmi">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        header{
+            display: flex;
+        }
+        header *{
+             border: 1px solid gray; 
+        }
+        :root{
+            --base-font-color:#333333;
+            --base-font-color-under-string: #707F89;
+        }
+        .site{
+            display: flex;
+            align-items: center;
+        }
+        .site img{
+            width: 42px;
+            margin-right: 10px;
+        }
+        .site.corp{
+            color: #333333;
+            font-size: 12px;
+            font-weight: 900;
+            line-height: 1.4;
+        }
+        .site.desc{
+            color: #707f89;
+            font-size: 10px;
+            line-height: 1.4;
+        }
+        .sr-only{
+            border: 0;
+            clip: rect(0 0 0 0 );
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+        .nav-button{
+            box-sizing: content-box;
+            padding: 0;
+            outline: none;
+            border: none;
+            background: none;
+            width: 20px;
+            height: 14px;
+            cursor: position;
+            color: #2E5180;
+        }
+        .nav-button::before{
+            content: "";
+            display: block;
+            height: 2px;
+            background-color: currentColor;
+            transform: translateY(5px);
+        }
+
+    </style>                                             
+</head>
+<body>
+    <header>
+        <div class="site">
+            <img src="img/bb.svg" alt="会社ロゴ">
+            <div>
+                <p class="corp">BBアシストカンパニー</p>
+                <p class="desc">確かなスタッフによる業務サポート</p>
+            </div>
+        </div>
+    </header>
+    <nav>
+
+    </nav>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
