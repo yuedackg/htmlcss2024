@@ -1,0 +1,20 @@
+th{
+    background-color: lightblue;
+}
+th, td{
+    border: solid 2px black;
+}
+td{
+    text-align: right;
+}
+caption{
+    caption-side:top;
+}
+table{
+    border-collapse: collapse;
+    border: none;
+}
+thead th:nth-child(1){
+    border: none;
+    background-color: white;
+}

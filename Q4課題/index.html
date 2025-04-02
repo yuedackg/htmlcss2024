@@ -55,132 +55,6 @@
 
 
     </section>
-    <!-- ここにCSSを記述する　最終完成したものは、style.cssに移動する -->
-    <style>
-        .service {
-            padding: 67px 0;
-        }
-
-        .service .container {
-            flex-direction: column;
-            /* 並びの方向を縦にする */
-            text-align: center;
-            /* 文字の位置を中央揃えにする */
-        }
-
-        .service h2 {
-            display: inline-block;
-            font-size: 24px;
-            color: #2E5180;
-            margin-bottom: 16px;
-            padding-bottom: 9px;
-            border-bottom: 2px dotted currentColor;
-        }
-
-        /* セレクタで＋がつく場合には、＋の前にあるセレクタに隣接する要素という指定になる。 */
-        .service h2+p {
-            color: #2E5180;
-            font-size: 16px;
-        }
-
-        /* 画面の最小幅９００だったら（それよりも大きい） */
-        @media (min-width: 900px) {
-            .service {
-                /* パラメータが３津の場合
-                    上、　左右、　下
-                */
-                padding: 95px 0 87px;
-            }
-
-            .service h2 {
-                font-size: 36px;
-            }
-        }
-
-        .office figure {
-            background-image: url(img/office.jpg);
-            height: 240px;
-        }
-
-        .manage figure {
-            background-image: url(img/manage.jpg);
-            height: 240px;
-        }
-
-        .research figure {
-            background-image: url(img/research.jpg);
-            height: 240px;
-        }
-
-        /* このセレクタ以外にも正解はある */
-        .detail figure {
-            height: 246px;
-            margin-bottom: 22px;
-            background-position: center;
-            background-size: cover;
-        }
-
-        /*
-         class btn のデザイン
-        同じボタンが3つあるため、classで共通名を付ける 
-        class名「btn」は、div（detail）のブロックでのみ使われる
-        */
-        .btn {
-            /*
-            　aタグはインライン要素なので、ブロック要素（デザイン要素）に種別変更
-             */
-            display: block;
-            width: 200px;
-            /* マージンのパラメータ：　上下　左右　→中央揃え */
-            margin: 0 auto;
-            /* 余白のパラメータ：　上　左右　下 */
-            padding: 11px 11px 13px;
-            border: solid 2px currentColor;
-            border-radius: 40px;
-            /*
-             要素のサイズ（線、外余白含む）をトータルで幅の指定を行う
-             */
-            box-sizing: border-box;
-            color: #2e5180;
-            font-size: 16px;
-            /* 線の厚さ */
-            font-weight: bold;
-            text-align: center;
-        }
-
-        .details {
-            display: flex;
-            margin-top: 75px;
-        }
-
-        .detail {
-            /* 右の余白に余白を設定 */
-            margin-right: 3%;
-        }
-
-        .detail :first-child {
-            margin-left: 3%;
-        }
-
-        .detail h2 {
-            font-size: 30px;
-            line-height: 1.4;
-        }
-
-        .detail p {
-            width: 80%;
-            /* text-align:center;の代わり
-            　　インライン要素の中央揃えでは比較的よく使われる
-                実際に指定したいのは、左右余白。
-            */
-            margin: 0 auto;
-        }
-
-        .detail figure {
-            height: 360px;
-            margin-bottom: 30px;
-        }
-    </style>
 
     <section class="service">
         <!--
@@ -190,6 +64,11 @@
             <h2>アシスタントサービス</h2>
             <p>私たちにできること</p>
 
+            <style>                /* for debug */
+            .service .detail {
+                border: solid 1px red;
+            }
+            </style>
             <div class="details">
                 <div class="detail office">
                     <figure></figure>
@@ -219,7 +98,87 @@
         </div>
 
     </section>
+    <style>
+        .contact {
+            box-sizing: border-box;
+            border: solid 1px gray;
+            color: #333333;
+            background-color: #eef4f8;
+            padding: 70px 0px; /* 余白は　上下　左右　の二つを指定 */
+        }
+        .contact .text{
+            display: flex;
+            flex-direction: column;  /* 並びの方向を行（column） */
+        }
+        .contact h2{
+            font-size: 36px;
+        }
+        
+        /* 連絡先の左側のサイズ指定 */
+        .contact .container .text{
+            width: 50%;
+        }
+        /* 連絡先のフォーム部分のサイズ指定 */
+        .contact .container form {
+            width: 45%;
+        }
+        /* フォーム部品のサイズ指定 */
+        .contact  input,  .contact textarea{
+            box-sizing: border-box;
+            width: 100%;
+            font-size: 20px;
+            margin-bottom: 20px;
+            padding: 10px 20px 10px;
+        }
+        .contact #btn {
+            width: 100px;
+            margin: 0;
+            border: black;
+            background-color: #2e5180;
+            color: white;
+            border-radius: 25px;
+        }
+        /* .contact .container > * {
+            border: solid black 1px;
+            box-sizing: border-box;
+        } */
+        .contact .container {
+            display: flex;
+            /*
+             水平方向の配置を行う
+             space-betweenは両端の余白を設けない指定
+             space-arroundは両端の余白を設ける指定
+             */
+            justify-content: space-between;
+        }
+    </style>
+    <section class="contact">
+        <div class="container"> <!-- 余白の設定等を行う -->
+            <div class="text"> <!-- レイアウト枠 -->
+                <h2>お問い合わせ</h2>
 
+                <p>
+                    もっと業務を効率化したい。
+                    マネージメントの煩わしさから開放されたい。
+                    本業に集中したいなど、些細なことでもお気軽にお問い合わせください。
+                </p>
+            </div>
+            <!-- 
+            form のaction属性は、Webサーバを作った人からプログラムのありかを教えてもらって聞く
+            form のmethod属性は、いろいろな情報を送る場合にはpostを使用する。getを使うと、URLの欄に入力した情報がすべて表示されるので、現在はあまり使われない。
+            -->
+            <!--
+             placeholder属性は、入力ボックスに文字を表示してくれる。入力とともに、表示されている文字が消える。
+              -->
+            <form action="" method="post">
+                <input type="text" id="" placeholder="名前">
+                <input type="text" id="" placeholder="電子メール">
+                <!-- textarea タグで、row属性で行数の指定を行う -->
+                <textarea name="" id="" placeholder="メッセージを入力してください" rows="4"></textarea>
+                <input type="submit" value="送信" id="btn">
+            </form>
+        </div>
+    </section>
     <nav>
 
     </nav>

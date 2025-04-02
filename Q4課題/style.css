@@ -156,3 +156,126 @@ header,.container{
         line-height: 1.11;
     }
 }
+.service {
+    padding: 67px 0;
+}
+
+.service .container {
+    flex-direction: column;
+    /* 並びの方向を縦にする */  
+    text-align: center;
+    /* 文字の位置を中央揃えにする */
+}
+
+.service h2 {
+    display: inline-block;
+    font-size: 24px;
+    color: #2E5180;
+    margin-bottom: 16px;
+    padding-bottom: 9px;
+    border-bottom: 2px dotted currentColor;
+}
+
+/* セレクタで＋がつく場合には、＋の前にあるセレクタに隣接する要素という指定になる。 */
+.service h2+p {
+    color: #2E5180;
+    font-size: 16px;
+}
+
+/* 画面の最小幅９００だったら（それよりも大きい） */
+@media (min-width: 900px) {
+    .service {
+        /* パラメータが３津の場合
+            上、　左右、　下
+        */
+        padding: 95px 0 87px;
+    }
+
+    .service h2 {
+        font-size: 36px;
+    }
+}
+
+.office figure {
+    background-image: url(img/office.jpg);
+    height: 240px;
+}
+
+.manage figure {
+    background-image: url(img/manage.jpg);
+    height: 240px;
+}
+
+.research figure {
+    background-image: url(img/research.jpg);
+    height: 240px;
+}
+
+/* このセレクタ以外にも正解はある */
+.detail figure {
+    height: 246px;
+    margin-bottom: 22px;
+    background-position: center;
+    background-size: cover;
+}
+
+/*
+ class btn のデザイン
+同じボタンが3つあるため、classで共通名を付ける 
+class名「btn」は、div（detail）のブロックでのみ使われる
+*/
+.btn {
+    /*
+    　aタグはインライン要素なので、ブロック要素（デザイン要素）に種別変更
+     */
+    display: block;
+    width: 200px;
+    /* マージンのパラメータ：　上下　左右　→中央揃え */
+    margin: 0 auto;
+    /* 余白のパラメータ：　上　左右　下 */
+    padding: 11px 11px 13px;
+    border: solid 2px currentColor;
+    border-radius: 40px;
+    /*
+     要素のサイズ（線、外余白含む）をトータルで幅の指定を行う
+     */
+    box-sizing: border-box;
+    color: #2e5180;
+    font-size: 16px;
+    /* 線の厚さ */
+    font-weight: bold;
+    text-align: center;
+}
+
+.details {
+    display: flex;
+    margin-top: 75px;
+}
+
+.detail {
+    /* 右の余白に余白を設定 */
+    margin-right: 3%;
+}
+
+.detail :first-child {
+    margin-left: 3%;
+}
+
+.detail h2 {
+    font-size: 30px;
+    line-height: 1.4;
+}
+
+.detail p {
+    width: 80%;
+    /* text-align:center;の代わり
+    　　インライン要素の中央揃えでは比較的よく使われる
+        実際に指定したいのは、左右余白。
+    */
+    margin: 0 auto;
+}
+
+.detail figure {
+    height: 360px;
+    margin-bottom: 30px;
+}
